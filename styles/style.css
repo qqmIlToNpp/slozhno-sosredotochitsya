@@ -74,7 +74,6 @@
 .cover {
   display: grid;
   padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
-  padding: clamp(10px, 50%, 20px);
   min-block-size: 100vh;
 }
 /* header */
@@ -125,8 +124,8 @@
 .page-title {
   color: var(--brand-color, #db00ff);
   font-weight: 700;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 
 .header__title {
