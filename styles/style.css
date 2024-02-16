@@ -303,10 +303,10 @@ min-height: 668px;
     gap: 80px;
     padding: 60px 20px;
   }
-}
 
-.footer {
-  min-height: 1024px;
+  .footer {
+    min-height: 1024px;
+  }
 }
 
 @media (width >= 1024px) {
