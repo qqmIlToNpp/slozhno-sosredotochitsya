@@ -1,27 +1,27 @@
 :root {
-  --color-pink-1: #fff1f7;
-  --color-pink-2: #f1b2ce;
-  --color-pink-3: #ffc2e6;
-  --color-pink-4: #ff8dcb;
+  --color-pink-background: #fff1f7;
+  --color-pink-text: #f1b2ce;
+  --color-pink-brand: #ffc2e6;
+  --color-pink-accent: #ff8dcb;
 
-  --color-purple-1: #db00ff;
-  --color-purple-2: #ff0070;
-  --color-purple-2-40: #ff007040;
+  --color-purple-brand: #db00ff;
+  --color-purple-secondary-accent: #ff0070;
+  --color-purple-secondary-40: #ff007040;
 
-  --color-black-1: #000028;
-  --color-black-2: #353430;
-  --color-black-2-40: #32312D40;
+  --color-black-highlight-bg: #000028;
+  --color-black-text: #353430;
+  --color-black-secondary-40: #32312D40;
 
-  --text-color: var(--color-pink-2, #f1b2ce);
-  --brand-color: var(--color-purple-1, #db00ff);
-  --secondary-color: var(--color-purple-2, #ff0070);
-  --accent-color: var(--color-purple-2, #ff0070);
-  --highlight-color: var(--color-black-1, #000028);
+  --text-color: var( --color-pink-text, #f1b2ce);
+  --brand-color: var(--color-purple-brand, #db00ff);
+  --secondary-color: var(--color-purple-secondary-accent, #ff0070);
+  --accent-color: var(--color-purple-secondary-accent, #ff0070);
+  --highlight-color: var(--color-black-highlight-bg, #000028);
 
   --page-background-image: url("../images/cover-image.png");
-  --page-background-color: var(--color-black-1, #000028);
+  --page-background-color: var(--color-black-highlight-bg, #000028);
   --page-font-family: "IBM Plex mono", monospace;
-  --secondary-color-40: var(--color-purple-2-40, #ff007040);
+  --secondary-color-40: var(--color-purple-secondary-40, #ff007040);
   --rec-dot-visibility: visible;
 }
 

@@ -8,6 +8,7 @@
   background-size: cover;
   background-image: var(--page-background-image, url("../images/cover-image.png"));
   background-attachment: fixed;
+
 }
 
 /* mobile first */
@@ -21,19 +22,25 @@
   gap: 10px;
   inset-inline-end: clamp(20px, -0.5677rem + 5.0891vw, 30px);
   inset-block-start: clamp(10px, 0.0286rem + 2.5445vw, 30px);
+  visibility: var(--rec-dot-visibility, visible);
+  /* забыл добавить переменную видимости (( */
 }
 
 .rec-dot::before {
   content: "REC";
   color: var(--accent-color, #ff0070);
   line-height: 24px;
+  text-transform: uppercase;
 }
 
 .rec-dot::after {
   content: "";
   display: inline-block;
   border-radius: 50%;
-  box-shadow: 0 0 2px 2px var(--accent-color, #ff0070);
+  /* box-shadow: 0 0 4px 4px var(--accent-color, #ff0070);
+  скрин с размерами тени с макета прилагаю в папке image*/
+  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
+
   background: var(--accent-color, #ff0070);
   inline-size: 9px;
   block-size: 9px;
@@ -42,6 +49,7 @@
 
 .header {
   align-items: start;
+min-height: 668px;
 }
 
 .decorated-zone {
@@ -108,7 +116,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border-color: var(--secondary-color-40, #ff007040);
+  border-color: var(--hover-color-40, #ff007040);
 }
 
 .header__theme-menu-button:focus {
@@ -224,6 +232,7 @@
 
 .footer {
   place-items: center;
+  min-height: 668px;
 }
 
 @media (width >= 768px) {
@@ -271,23 +280,33 @@
   }
 
   .header {
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr min-content 1fr;
     padding-inline-start: 0;
+    min-height: 1024px;
   }
 
   .header__theme-menu {
-    margin-block-start: 173px;
-    margin-block-end: 70px;
+    align-self: center;
   }
 
   .header__title {
     justify-self: end;
+    align-self: center;
     inline-size: clamp(364px, (50% - 10px), 491px);
   }
+
+/* спасибо за подсказки */
 
   .main {
     gap: 80px;
     padding: 60px 20px;
   }
+}
+
+.footer {
+  min-height: 1024px;
 }
 
 @media (width >= 1024px) {
@@ -300,14 +319,31 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .header {
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr;
+    padding-inline-start: 0;
+    min-height: 1024px;
+  }
+
   .header__theme-menu {
-    justify-self: center;
-    margin-inline-start: 20px;
-    margin-block-start: 0;
-    margin-block-end: 215px;
+  justify-self: center;
+  align-self: start;
+  margin-block-start: 0;
+  margin-inline-start: 20px;
+  }
+
+  .header__title {
+    justify-self: end;
+    align-self: center;
+    inline-size: clamp(364px, (50% - 10px), 491px);
   }
 
   .header__theme-menu-list {
     flex-direction: row;
+  }
+  .header,
+  .footer {
+    min-height: 768px;
   }
 }
