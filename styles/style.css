@@ -8,7 +8,6 @@
   background-size: cover;
   background-image: var(--page-background-image, url("../images/cover-image.png"));
   background-attachment: fixed;
-
 }
 
 /* mobile first */
@@ -23,7 +22,6 @@
   inset-inline-end: clamp(20px, -0.5677rem + 5.0891vw, 30px);
   inset-block-start: clamp(10px, 0.0286rem + 2.5445vw, 30px);
   visibility: var(--rec-dot-visibility, visible);
-  /* забыл добавить переменную видимости (( */
 }
 
 .rec-dot::before {
@@ -37,10 +35,7 @@
   content: "";
   display: inline-block;
   border-radius: 50%;
-  /* box-shadow: 0 0 4px 4px var(--accent-color, #ff0070);
-  скрин с размерами тени с макета прилагаю в папке image*/
   box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
-
   background: var(--accent-color, #ff0070);
   inline-size: 9px;
   block-size: 9px;
@@ -49,7 +44,8 @@
 
 .header {
   align-items: start;
-min-height: 668px;
+  min-height: 100vh;
+  block-size: max(100vh, 668px);
 }
 
 .decorated-zone {
@@ -116,7 +112,7 @@ min-height: 668px;
 }
 
 .header__theme-menu-button:hover {
-  border-color: var(--hover-color-40, #ff007040);
+  border-color: var(--secondary-color-40, #ff007040);
 }
 
 .header__theme-menu-button:focus {
@@ -179,6 +175,10 @@ min-height: 668px;
   background: var(--accent-color, #ff0070);
 }
 
+.title-list {
+  font-weight: 400;
+}
+
 .articles-list {
   display: grid;
   gap: 20px;
@@ -218,7 +218,7 @@ min-height: 668px;
 }
 
 .link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--text-color, #f1b2ce);
 }
 
 .link:focus {
@@ -232,7 +232,7 @@ min-height: 668px;
 
 .footer {
   place-items: center;
-  min-height: 668px;
+  block-size: max(100vh, 668px);
 }
 
 @media (width >= 768px) {
@@ -284,7 +284,7 @@ min-height: 668px;
     align-items: center;
     grid-template-rows: 1fr min-content 1fr;
     padding-inline-start: 0;
-    min-height: 1024px;
+    block-size: max(100vh, 1024px);
   }
 
   .header__theme-menu {
@@ -305,7 +305,7 @@ min-height: 668px;
   }
 
   .footer {
-    min-height: 1024px;
+    block-size: max(100vh, 1024px);
   }
 }
 
@@ -323,7 +323,7 @@ min-height: 668px;
     display: grid;
     grid-template-rows: 1fr min-content 1fr;
     padding-inline-start: 0;
-    min-height: 1024px;
+    block-size: max(100vh, 768px);
   }
 
   .header__theme-menu {
@@ -342,8 +342,8 @@ min-height: 668px;
   .header__theme-menu-list {
     flex-direction: row;
   }
-  .header,
+
   .footer {
-    min-height: 768px;
+    block-size: max(100vh, 768px);
   }
 }
